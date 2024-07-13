@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Raleway;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* min-height: 100vh;;  */
+    background-color: rgb(54, 69, 79);
+    color: white;
+}
+
+/* header  */
+header {
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 18px;
+    color: rgb(151, 164, 170);
+}
+
+input,
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.formflex {
+    display: flex;
+    justify-content: space-between;
+}
+
+#addhogia {
+    background-color: #2222228c;
+    width: 100%;
+    padding: 16px;
+    margin-right: 16px;
+    border-radius: 16px;
+    color: rgba(255, 255, 255, 0.624);
+    font-size: 17px;
+    font-weight: 500;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+#addhogia:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+#input-txt::placeholder {
+    color: rgba(255, 255, 255, 0.57);
+}
+
+/* Button */
+#input-sub {
+    /* color: rgb(255, 192, 203); */
+    font-size: 18px;
+    font-weight: 800;
+    background-image: linear-gradient(rgb(243, 236, 238), rgba(221, 10, 221, 0.895));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#input-sub:hover {
+    opacity: 0.8;
+}
+
+#input-sub:active {
+    opacity: 0.5;
+}
+
+/* Taks */
+.classDiv {
+    padding: 2rem 0rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: rgb(152, 167, 173);
+}
+
+#taskList li {
+    display: flex;
+    flex-direction: column;
+    background-color: hsla(0, 0%, 6%, 0.679);
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+.task-text {
+    flex-grow: 1;
+    cursor: default;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+.buttons {
+    display: flex;
+    gap: 10px;
+    /* Align buttons to the end */
+    justify-content: flex-end;
+}
+
+.But {
+    cursor: pointer;
+    margin: 0 6px;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+/* Edit  */
+.editButton {
+    color: rgb(255, 192, 203);
+    background-image: linear-gradient(rgb(219, 129, 144), rgba(197, 20, 197, 0.895));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Delete */
+.delButton {
+    color: crimson;
+}
+
+.edit-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-container input {
+    flex-grow: 1;
+    margin-right: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+
+/* Save  */
+.saveButton {
+    color: #0707d9;
+}
+
+#taskList .editing {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color change */
+}
+
+#taskList .editing:focus {
+    background-color: rgb(54, 69, 79);
+    /* Dark background color */
+    color: white;
+    /* White text color */
+    border-color: #16395f;
+    /* Border color on focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+    /* Box shadow on focus */
+}
+
+
+
+
+#taskList .editing input {
+    color: black;
+}
+
+.time-remaining {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 4px 0 0 0;
+}
+
+@media (width < 400px) {
+    .time-remaining {
+        padding: 5px 0;
+    }
+
+}
+
+/* .edit-container {
+    display: flex;
+    align-items: center;
+} */
+.edit-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+
+.edit-container input[type="text"],
+.edit-container input[type="number"] {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+    max-width: 100%;
+}
+
+.edit-container button {
+    /* padding: 8px 16px; */
+    /* background-color: #0707d9; */
+    /* border: none; */
+    /* border-radius: 4px; */
+    color: #0707d9;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.edit-container button:hover {
+    color: #010180;
+}
+
+@media (width < 525px) {
+    .edit-container {
+        flex-direction: column;
+    }
+
+    #taskList .editing input {
+        width: 100%;
+        margin-top: 7px;
+    }
+
+    #taskList li {
+        padding: 12px 16px;
+    }
+
+    .edit-container button {
+        margin-top: 12px;
+    }
+}
